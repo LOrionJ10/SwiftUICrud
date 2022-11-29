@@ -13,6 +13,7 @@
 		ADFEB2692936827C008A76C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFEB2682936827C008A76C7 /* Preview Assets.xcassets */; };
 		ADFEB27129368301008A76C7 /* Viga.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADFEB26F29368301008A76C7 /* Viga.xcdatamodeld */; };
 		ADFEB273293683BE008A76C7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFEB272293683BE008A76C7 /* CoreDataManager.swift */; };
+		ADFEB27529369F94008A76C7 /* ViewEditar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFEB27429369F94008A76C7 /* ViewEditar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		ADFEB2682936827C008A76C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ADFEB27029368301008A76C7 /* Viga.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Viga.xcdatamodel; sourceTree = "<group>"; };
 		ADFEB272293683BE008A76C7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		ADFEB27429369F94008A76C7 /* ViewEditar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEditar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +41,6 @@
 		ADFEB2552936827B008A76C7 = {
 			isa = PBXGroup;
 			children = (
-				ADFEB272293683BE008A76C7 /* CoreDataManager.swift */,
 				ADFEB2602936827B008A76C7 /* SwiftUIExamen */,
 				ADFEB25F2936827B008A76C7 /* Products */,
 			);
@@ -56,6 +57,8 @@
 		ADFEB2602936827B008A76C7 /* SwiftUIExamen */ = {
 			isa = PBXGroup;
 			children = (
+				ADFEB27429369F94008A76C7 /* ViewEditar.swift */,
+				ADFEB272293683BE008A76C7 /* CoreDataManager.swift */,
 				ADFEB2612936827B008A76C7 /* SwiftUIExamenApp.swift */,
 				ADFEB2632936827B008A76C7 /* ContentView.swift */,
 				ADFEB2652936827C008A76C7 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				ADFEB2642936827B008A76C7 /* ContentView.swift in Sources */,
 				ADFEB27129368301008A76C7 /* Viga.xcdatamodeld in Sources */,
+				ADFEB27529369F94008A76C7 /* ViewEditar.swift in Sources */,
 				ADFEB273293683BE008A76C7 /* CoreDataManager.swift in Sources */,
 				ADFEB2622936827B008A76C7 /* SwiftUIExamenApp.swift in Sources */,
 			);
