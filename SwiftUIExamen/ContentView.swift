@@ -31,7 +31,7 @@ struct ContentView: View {
                             vi in
                             HStack{
                                 Image(systemName: "gear")
-                                Text(vi.clv_viga ?? "")
+                                Text(vi.clv_viga ?? "" )
                             }
                             .swipeActions{
                                 Button(action: {
@@ -50,7 +50,7 @@ struct ContentView: View {
                                     editar = true
                                 }){
                                     Text("Editar")
-                                }.tint(.cyan)
+                                }.tint(.blue)
                             }
                             NavigationLink(destination: ViewEditar(coreDM: coreDM, clvO: $clvO, clvV: $clvV, materialV: $mate, longitudV: $longi, pesoV: $pes), isActive: $editar){
                                 Text("")
@@ -59,8 +59,7 @@ struct ContentView: View {
                     }
                 }
                 .tabItem{
-                    Image(systemName: "note")
-                    Text("Datos")
+                    Label("Datos", systemImage: "list.dash")
                 }
                 
                 VStack{
@@ -95,8 +94,7 @@ struct ContentView: View {
                 }
                 
                 .tabItem{
-                    Image(systemName: "cross")
-                    Text("Agregar")
+                    Label("Agregar", systemImage: "square.and.pencil")
                 }
             }
         }.onAppear(perform: {
