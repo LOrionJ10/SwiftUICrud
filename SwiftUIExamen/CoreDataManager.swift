@@ -77,7 +77,7 @@ class CoreDataManager{
     
     func actualizarViga(clv_obra:String, clv_viga:String, material:String, longitud:String, peso:String){
         let fetchRequest : NSFetchRequest<Viga> = Viga.fetchRequest()
-        let predicate = NSPredicate(format: "clv_obra = %@", clv_obra ?? "")
+        let predicate = NSPredicate(format: "clv_obra = %@", clv_obra)
         fetchRequest.predicate = predicate
         
         do{

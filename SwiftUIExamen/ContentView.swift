@@ -30,7 +30,7 @@ struct ContentView: View {
                         ForEach(list, id: \.self){
                             vi in
                             HStack{
-                                Image(systemName: "person")
+                                Image(systemName: "gear")
                                 Text(vi.clv_viga ?? "")
                             }
                             .swipeActions{
@@ -38,7 +38,7 @@ struct ContentView: View {
                                     let viga = vi
                                     borrarVigas(viga: viga)
                                 }){
-                                    Text("Borrar")
+                                    Text("Eliminar")
                                 }.tint(.red)
                                 
                                 Button(action: {
@@ -49,10 +49,10 @@ struct ContentView: View {
                                     pes = vi.peso ?? ""
                                     editar = true
                                 }){
-                                    Image(systemName: "pencil")
+                                    Text("Editar")
                                 }.tint(.cyan)
                             }
-                            NavigationLink(destination: ViewEditar(coreDM: coreDM, clvO: $clvO, clvV: $clvV, materialV: $mate, longitudV: $longi, pesoV: $pes)){
+                            NavigationLink(destination: ViewEditar(coreDM: coreDM, clvO: $clvO, clvV: $clvV, materialV: $mate, longitudV: $longi, pesoV: $pes), isActive: $editar){
                                 Text("")
                             }.hidden()
                         }
@@ -64,27 +64,25 @@ struct ContentView: View {
                 }
                 
                 VStack{
-                    
                     TextField("Calve de obra", text: $clv_obraViga)
                         .textFieldStyle(.roundedBorder)
                         .textContentType(.telephoneNumber)
-                    
+                    Spacer()
                     TextField("Clave de viga", text: $clv_vigaViga)
                         .textFieldStyle(.roundedBorder)
                         .textContentType(.telephoneNumber)
-                    
+                    Spacer()
                     TextField("Material", text: $materialViga)
                         .textFieldStyle(.roundedBorder)
                         .textContentType(.telephoneNumber)
-                    
+                    Spacer()
                     TextField("Longitud", text: $longitudViga)
                         .textFieldStyle(.roundedBorder)
                         .textContentType(.telephoneNumber)
-                    
+                    Spacer()
                     TextField("Peso", text: $pesoViga)
                         .textFieldStyle(.roundedBorder)
                         .textContentType(.telephoneNumber)
-                    
                     Button("Guardar"){
                         coreDM.guardarViga(clv_obra: clv_obraViga, clv_viga: clv_vigaViga, material: materialViga, longitud: longitudViga, peso: pesoViga)
                         obtenerVigas()

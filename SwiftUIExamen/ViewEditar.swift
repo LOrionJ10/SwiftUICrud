@@ -23,19 +23,19 @@ struct ViewEditar: View{
             TextField("Clave de viga", text: $clvV)
                 .textFieldStyle(.roundedBorder)
                 .textContentType(.telephoneNumber)
-            
+            Spacer()
             TextField("Material", text: $materialV)
                 .textFieldStyle(.roundedBorder)
                 .textContentType(.telephoneNumber)
-            
+            Spacer()
             TextField("Longitud", text: $longitudV)
                 .textFieldStyle(.roundedBorder)
                 .textContentType(.telephoneNumber)
-            
+            Spacer()
             TextField("Peso", text: $pesoV)
                 .textFieldStyle(.roundedBorder)
                 .textContentType(.telephoneNumber)
-            
+            Spacer()
             Button("Guardar"){
                 coreDM.actualizarViga(clv_obra: clvO, clv_viga: clvV, material: materialV, longitud: longitudV, peso: pesoV)
             }
